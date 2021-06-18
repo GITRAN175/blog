@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web结业报告</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1><a id="Web_0"></a>Web结业报告</h1>
+<p>经过一学期的学习，Web课程已经进入尾声。这学期我们从HTML,CSS,JAVASCRIPT,MDB,Agular已经入门了web开发的领域。但是这只是知识的冰山一角，需要我们以后再继续探索。</p>
+<h2><a id="_2"></a>大作业中遇到的问题</h2>
+<h3><a id="1_3"></a>问题1</h3>
+<p>在这次实践操作中，遇到最棘手的问题，就是在导航条中出现了url不能跳转的的问题，<br>
+<img src="https://img-blog.csdnimg.cn/20210618163903962.png" alt="在这里插入图片描述"></p>
+<p>在分析代码时，我发现了问题。<br>
+导航条代码如下：</p>
+<pre><code class="prism language-java"><span class="token operator">&lt;</span>nav <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top"</span><span class="token operator">&gt;</span>
+
+      <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Navbar brand <span class="token operator">--</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-brand"</span> href<span class="token operator">=</span><span class="token string">"#"</span><span class="token operator">&gt;</span>Navbar<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Collapse button <span class="token operator">--</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>button <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-toggler"</span> type<span class="token operator">=</span><span class="token string">"button"</span> data<span class="token operator">-</span>toggle<span class="token operator">=</span><span class="token string">"collapse"</span> data<span class="token operator">-</span>target<span class="token operator">=</span><span class="token string">"#basicExampleNav"</span>
+          aria<span class="token operator">-</span>controls<span class="token operator">=</span><span class="token string">"basicExampleNav"</span> aria<span class="token operator">-</span>expanded<span class="token operator">=</span><span class="token string">"false"</span> aria<span class="token operator">-</span>label<span class="token operator">=</span><span class="token string">"Toggle navigation"</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-toggler-icon"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Collapsible content <span class="token operator">--</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"collapse navbar-collapse"</span> id<span class="token operator">=</span><span class="token string">"basicExampleNav"</span><span class="token operator">&gt;</span>
+
+          <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Links <span class="token operator">--</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-nav mr-auto smooth-scroll"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-item"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span> href<span class="token operator">=</span><span class="token string">"#intro"</span><span class="token operator">&gt;</span>Home<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-item"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span> href<span class="token operator">=</span><span class="token string">"#best-features"</span><span class="token operator">&gt;</span>Features<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-item"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span> href<span class="token operator">=</span><span class="token string">"#examples"</span><span class="token operator">&gt;</span>Examples<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-item"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span> href<span class="token operator">=</span><span class="token string">"#gallery"</span><span class="token operator">&gt;</span>Gallery<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-item"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span> href<span class="token operator">=</span><span class="token string">"#contact"</span><span class="token operator">&gt;</span>Contact<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Links <span class="token operator">--</span><span class="token operator">&gt;</span>
+
+          <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Social Icon  <span class="token operator">--</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-nav nav-flex-icons"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-item"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fab fa-facebook-f"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-item"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fab fa-twitter"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-item"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fab fa-instagram"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Collapsible content <span class="token operator">--</span><span class="token operator">&gt;</span>
+
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>nav<span class="token operator">&gt;</span>
+</code></pre>
+<p>在这段代码中，有一段负责跳转平滑的代码</p>
+<pre><code class="prism language-java"><span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-nav mr-auto smooth-scroll"</span><span class="token operator">&gt;</span>
+</code></pre>
+<p><mark>smooth-scroll</mark><br>
+这个属性会使导航在本页面的跳转变得平滑，但是也将跳转限制在了一个页面，所以不能进行其他页面的跳转。<br>
+当删除段代码时，导航条又能够继续工作。</p>
+<h3><a id="2_72"></a>问题2</h3>
+<p>在web的页面设计的时候，有时候需要一个返回按钮，但是当我们的页面做大后，找一个按钮显得很麻烦，所以我们需要将一个按钮固定到页面的一个位置。这需要用到CSS。这里提供一串简单的代码。</p>
+<pre><code class="prism language-java"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"dg"</span> style<span class="token operator">=</span><span class="token string">"z-index: 9999; position: fixed ! important; right: 0px; top: 600px;"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>table width<span class="token operator">=</span><span class="token string">""</span><span class="token number">100</span><span class="token operator">%</span> style<span class="token operator">=</span><span class="token string">"position: absolute; width:260px; right: 0px; top: 0px;"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"./index.html"</span> target<span class="token operator">=</span><span class="token string">"_blank "</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary btn-md"</span><span class="token operator">&gt;</span>返回主页 <span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>table<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre>
+<p>效果如下<br>
+<img src="https://img-blog.csdnimg.cn/20210618193628969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE56Z25i,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2><a id="_84"></a>心得</h2>
+<p>在进行问题分析时，我们首先需要找到问题的所在，从大方面深入到小的方面，可以采用试错的方法，逐步分析，这相应的需要我们熟悉每一个版块的功能，在细节上找到问题所在。</p>
+</div>
+</body>
+
+</html>
